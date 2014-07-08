@@ -1,0 +1,16 @@
+#
+# light sensor drivers configuration
+#
+
+menuconfig INV_LIGHT
+	bool "light sensor device support"
+	help
+	  Enable this to be able to choose the drivers for controlling the
+	  light sensor on some platforms, for example on PDAs.
+
+if INV_LIGHT
+config INV_LIGHT_US5152
+    tristate "light sensor us5152 driver"
+    depends on I2C && SYSFS && INPUT
+    default n
+endif

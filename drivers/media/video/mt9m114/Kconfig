@@ -1,0 +1,9 @@
+#
+#  Fujitsu camera isp chip: m6moj.
+#
+config SOC_CAMERA_MT9M114
+	tristate "mt9m114 support"
+	depends on SOC_CAMERA && I2C
+	help
+	  This driver supports MT9M114 cameras from
+	  Micron/Aptina

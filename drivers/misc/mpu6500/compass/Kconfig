@@ -1,0 +1,30 @@
+#
+# compass drivers configuration
+#
+
+menuconfig INV_COMPASS
+	bool "inv compass device support"
+	help
+	  Enable this to be able to choose the drivers for controlling the
+	  g_sensor on some platforms, for example on PDAs.
+
+if INV_COMPASS
+config INV_COMPASS_YAS53X
+    tristate "Invensense Yamaha YAS530/YAS532 compass input device driver"
+    depends on I2C && SYSFS && INPUT
+    default n
+    help
+      This driver supports the Yamaha YAS530/YAS532 compass device .
+      This driver can be built as a module. The module will be called
+      inv-yas53x.
+
+config INV_COMPASS_AK89XX
+    tristate "Invensense AKM AK8975/AK8972/AK8963 compass input device drivers"
+    depends on I2C && SYSFS && INPUT
+    default n
+    help
+      This driver supports the AKM AK8975/AK8972/AK8963 compass devices.
+      This driver can be built as a module. The module will be called
+      inv-ak89xx.
+
+endif

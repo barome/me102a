@@ -1,0 +1,21 @@
+#
+# mpu6500 drivers configuration
+#
+
+menuconfig MPU6500_DEVICE
+	tristate "mpu6500 support"
+	
+if MPU6500_DEVICE
+
+source "drivers/misc/mpu6500/accel/Kconfig"
+source "drivers/misc/mpu6500/compass/Kconfig"
+source "drivers/misc/mpu6500/mpu/Kconfig"
+source "drivers/misc/mpu6500/lsensor/Kconfig"
+#source "drivers/misc/mpu6500/lsensor/Kconfig"
+#source "drivers/misc/mpu6500/psensor/Kconfig"
+#source "drivers/misc/mpu6500/temperature/Kconfig"
+#source "drivers/misc/mpu6500/pressure/Kconfig"
+
+
+endif
+

@@ -1,0 +1,20 @@
+#
+# temperature sensor drivers configuration
+#
+
+menuconfig THERMAL_DEVICE
+	bool "thermal_sensor device support"	
+	help
+	  Enable this to be able to choose the drivers for controlling the
+	  thermal_sensor on some platforms, for example on PDAs.
+
+if THERMAL_DEVICE
+
+config THERMAL_US5004
+  tristate "us5004"
+  depends on I2C
+  help	 
+	To have support for your specific temperature sensor you will have to
+	  select the proper drivers which depend on this option.
+	  
+endif

@@ -1,0 +1,14 @@
+#
+# hall sensor drivers configuration
+#
+
+menuconfig HALL_DEVICE
+	bool "hall sensor device support"
+	default n
+
+if HALL_DEVICE
+ config HALL_SENSOR
+ bool "hall sensor"
+ default n
+ 
+endif

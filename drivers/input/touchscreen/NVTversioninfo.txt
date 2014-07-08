@@ -1,0 +1,3 @@
+//  NVTTouch FW Versions  //
+O-film: 36
+Wintek: 116

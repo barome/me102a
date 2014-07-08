@@ -1,0 +1,24 @@
+
+#
+# gyro drivers configuration
+#
+
+menuconfig INV_GYRO
+	bool "Invensense GYRO devices"
+	depends on I2C && SYSFS && INPUT
+	default n
+	help
+	  This driver supports the Invensense GYRO devices.
+	  This driver can be built as a module. The module will be called
+	  inv-mpu.
+
+if INV_GYRO
+config INV_TESTING
+	boolean "Invensense GYRO Testing Information"
+	depends on INV_GYRO
+	default n
+	help
+	  This flag enables display of additional testing information from
+	  the Invensense GYRO driver.
+endif
+

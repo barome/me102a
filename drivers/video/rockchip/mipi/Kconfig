@@ -1,0 +1,2 @@
+config RK_MIPI
+       bool "RK_MIPI support"

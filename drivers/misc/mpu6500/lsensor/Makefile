@@ -1,0 +1,1 @@
+obj-$(CONFIG_INV_LIGHT_US5152) += ls_us5152.o
